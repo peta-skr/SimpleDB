@@ -31,7 +31,7 @@ public class FileMgr {
         try {
             RandomAccessFile f = getFile(blk.filename());
             f.seek(blk.number() * blockSize);
-            f.getChannel().write(p.contents());
+            f.getChannel().read(p.contents());
         }catch (IOException e) {
             throw new RuntimeException("cannot write block" + blk);
         }

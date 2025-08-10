@@ -16,6 +16,10 @@ public class Page {
     // 文字列をバイトに変換する際に使う文字セット（ここでは ASCII）
     public static final Charset CHARASET = StandardCharsets.US_ASCII;
 
+    public Page(int blocksize) {
+        bb = ByteBuffer.allocateDirect(blocksize);
+    }
+
     /**
      * コンストラクタ
      * バイト配列を ByteBuffer でラップする

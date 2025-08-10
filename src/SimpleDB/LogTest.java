@@ -11,7 +11,7 @@ public class LogTest {
         createRecords(1, 35);
         printLogRecords("The log file now has these records:");
         createRecords(36, 70);
-        lm.fulsh(65);
+        lm.flush(65);
         printLogRecords("The log file now has these records:");
     }
 
